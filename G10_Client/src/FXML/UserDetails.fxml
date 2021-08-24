@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserDetailsController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="446.0" pickOnBounds="true">
+         <image>
+            <Image url="@bg2.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="invalid_detailsL_ID" layoutX="200.0" layoutY="115.0" text="You Must Choose User ID">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="37.0" layoutY="86.0" prefHeight="200.0" prefWidth="132.0" spacing="35.0">
+         <children>
+            <Label fx:id="userId" text="User ID:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="userType" text="User Type">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="User Status">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="PaymentAcc Status">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Subscription:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="182.0" layoutY="86.0" prefHeight="235.0" prefWidth="242.0" spacing="28.0">
+         <children>
+            <ComboBox fx:id="id_combo" onAction="#check_SelecetdID" prefWidth="250.0" promptText="Choose ID" />
+            <ComboBox fx:id="type_combo" onAction="#check_selectedUserType" prefWidth="250.0" promptText="Choose User Type" />
+            <ComboBox fx:id="status_combo" onAction="#check_selectedUserStatus" prefWidth="250.0" promptText="Choose User Status" />
+            <ComboBox fx:id="status_payment_combo" onAction="#check_selectedPayAccStatus" prefWidth="250.0" promptText="Choose Status" />
+            <ComboBox fx:id="subscription_combo" onAction="#check_selectedSubscription" prefWidth="250.0" promptText="Choose Subscription" />
+         </children>
+      </VBox>
+      <Label layoutX="31.0" layoutY="14.0" prefHeight="36.0" prefWidth="242.0" text="Edit User Details">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="83.0" layoutY="516.0" mnemonicParsing="false" onAction="#BackToMenu" text="Back" />
+      <Button fx:id="save" layoutX="253.0" layoutY="516.0" mnemonicParsing="false" onAction="#UpdateDetails" prefHeight="25.0" prefWidth="89.0" text="Save " />
+   </children>
+</AnchorPane>

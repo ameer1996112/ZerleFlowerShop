@@ -1,0 +1,48 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.list-view .list-cell {
+-fx-background-color:  #424949;
+-fx-text-fill: White;
+-fx-font-style: italic;
+-fx-font-size: 16px;
+}
+
+.list-view .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+
+.list-view .list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.table-view .table-cell:filled:hover{
+	-fx-background-color: #0093ff;
+}
+
+.backbtn{
+	-fx-text-fill:white;
+}
+
+.editbtn{
+	-fx-text-fill:white;
+}
+
+.addbtn{
+	-fx-text-fill:white;
+}
+
+.savebtn{
+	-fx-text-fill:white;
+}
+
+.text-area,.text-field:focused {
+    -fx-focus-color: Black,1px; 
+    -fx-focus-shadow: 2px 2px 4px Black;
+} 
+
+/*.myDialog{
+    -fx-background-color:  #424949;
+    -fx-text-fill:white;
+}*/

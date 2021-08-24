@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #424949; -fx-text-fill: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditProductController">
+   <children>
+      <Label fx:id="ptype" layoutX="35.0" layoutY="20.0" prefHeight="32.0" prefWidth="98.0" text="Product Type :" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pcolor" layoutX="33.0" layoutY="77.0" prefHeight="32.0" prefWidth="98.0" text="Product Color :" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pprice" layoutX="34.0" layoutY="131.0" prefHeight="32.0" prefWidth="98.0" text="Product Price :" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="imgchooser" layoutX="30.0" layoutY="245.0" prefHeight="32.0" prefWidth="105.0" text="Choose Image :" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pType" editable="false" layoutX="148.0" layoutY="20.0" prefHeight="26.0" prefWidth="265.0" />
+      <TextField fx:id="pColor" editable="false" layoutX="148.0" layoutY="76.0" prefHeight="26.0" prefWidth="265.0" />
+      <TextField fx:id="pPrice" editable="false" layoutX="148.0" layoutY="130.0" prefHeight="26.0" prefWidth="265.0" />
+      <TextField fx:id="imgChooser" editable="false" layoutX="148.0" layoutY="242.0" prefHeight="26.0" prefWidth="265.0" />
+      <Button fx:id="choose" layoutX="428.0" layoutY="237.0" mnemonicParsing="false" onContextMenuRequested="#chooseBtn" onMouseClicked="#chooseBtn" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: Black;" text="choose" textFill="#fffefe" />
+      <Button fx:id="savebtn" layoutX="353.0" layoutY="353.0" mnemonicParsing="false" onContextMenuRequested="#savebtn" onMouseClicked="#savebtn" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: Black;" text="Save" textFill="#fffefe" />
+      <Button fx:id="bckbtn" layoutX="221.0" layoutY="354.0" mnemonicParsing="false" onContextMenuRequested="#backbtn" onMouseClicked="#backbtn" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: Black;" text="Back" textFill="#fffefe" />
+      <Label fx:id="imgchooser1" layoutX="30.0" layoutY="192.0" prefHeight="32.0" prefWidth="105.0" text=" Product  Sale :" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pSale" editable="false" layoutX="148.0" layoutY="191.0" prefHeight="26.0" prefWidth="265.0" />
+      <Label fx:id="ptype1" layoutX="23.0" layoutY="30.0" prefHeight="17.0" prefWidth="19.0" text="*" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ptype11" layoutX="23.0" layoutY="87.0" prefHeight="17.0" prefWidth="19.0" text="*" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ptype12" layoutX="23.0" layoutY="142.0" prefHeight="17.0" prefWidth="19.0" text="*" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

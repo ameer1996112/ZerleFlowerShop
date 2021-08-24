@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="340.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SelectOrderTypeController">
+   <children>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" cache="true" cacheHint="SPEED" contentDisplay="BOTTOM" depthTest="ENABLE" layoutX="27.0" layoutY="98.0" onAction="#CreateCatalogOrder" prefHeight="54.0" prefWidth="119.0" ripplerFill="#474a59" style="-fx-background-color: #a3d274;" text="Catalog order" textAlignment="CENTER" textFill="#f8f4f4" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Eras Bold ITC" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="188.0" layoutY="98.0" onAction="#CreateCustomOrder" prefHeight="54.0" prefWidth="119.0" ripplerFill="#474a59" style="-fx-background-color: #a3d274;" text="Custom order" textFill="#fafafa" wrapText="true">
+         <font>
+            <Font name="Eras Bold ITC" size="14.0" />
+         </font>
+      </JFXButton>
+      <Text fontSmoothingType="LCD" layoutX="86.0" layoutY="51.0" stroke="#1bb227" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeWidth="0.0" style="-fx-blend-mode: #b3b31a;" text="Select order type" textAlignment="CENTER" underline="true" wrappingWidth="168.99999670684338">
+         <font>
+            <Font name="Josefin Sans Bold" size="24.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#d0b0b0" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsController">
+   <center>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="598.0" prefWidth="196.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-21.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <LineChart fx:id="IncomeChart" layoutX="242.0" layoutY="203.0" prefHeight="356.0" prefWidth="334.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Button layoutX="383.0" layoutY="139.0" mnemonicParsing="false" onAction="#loadIncomeChart" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #151928;" text="LoadChart" textFill="#a0a2ab">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="235.0" layoutY="49.0" prefHeight="27.0" prefWidth="65.0" text="Income" textFill="#a0a2ab">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="300.0" layoutY="49.0" prefHeight="27.0" prefWidth="65.0" text="Chart" textFill="#2196f3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="BranchIDCombobox" layoutX="21.0" layoutY="159.0" onAction="#ComboBranch" prefWidth="150.0" promptText="Select BranchID" />
+                        <ComboBox fx:id="QuarterCombobox" layoutX="21.0" layoutY="240.0" onAction="#ComboQuarter" prefWidth="150.0" promptText="Select Quarter" />
+                        <ComboBox fx:id="YearCombobox" layoutX="21.0" layoutY="322.0" onAction="#ComboYear" prefWidth="150.0" promptText="Select Year" />
+                        <ComboBox fx:id="CategoryCombobox" layoutX="21.0" layoutY="401.0" onAction="#ComboCategory" prefWidth="150.0" promptText="Select Category" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="398.0" prefWidth="417.0" style="-fx-background-color: #2D3447;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <LineChart fx:id="IncomeChart1" layoutX="242.0" layoutY="203.0" prefHeight="356.0" prefWidth="334.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Button layoutX="383.0" layoutY="139.0" mnemonicParsing="false" onAction="#loadIncomeChart1" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #151928;" text="LoadChart" textFill="#a0a2ab">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="235.0" layoutY="49.0" prefHeight="27.0" prefWidth="65.0" text="Income" textFill="#a0a2ab">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="300.0" layoutY="49.0" prefHeight="27.0" prefWidth="65.0" text="Chart" textFill="#2196f3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="BranchIDCombobox1" layoutX="21.0" layoutY="159.0" onAction="#ComboBranch1" prefWidth="150.0" promptText="Select BranchID" />
+                        <ComboBox fx:id="QuarterCombobox1" layoutX="21.0" layoutY="240.0" onAction="#ComboQuarter1" prefWidth="150.0" promptText="Select Quarter" />
+                        <ComboBox fx:id="YearCombobox1" layoutX="21.0" layoutY="323.0" onAction="#ComboYear1" prefWidth="150.0" promptText="Select Year" />
+                        <ComboBox fx:id="CategoryCombobox1" layoutX="21.0" layoutY="404.0" onAction="#ComboCategory1" prefWidth="150.0" promptText="Select Category" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="600.0" minWidth="600.0" prefHeight="602.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsController">
+   <children>
+      <Button fx:id="OrdersReport" layoutX="39.0" layoutY="237.0" mnemonicParsing="false" onAction="#OrdersReport" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="OrdersReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="IncomeReport" layoutX="39.0" layoutY="192.0" mnemonicParsing="false" onAction="#IncomeReport" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="IncomeReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="CustomerSatisfactionReport" layoutX="39.0" layoutY="156.0" mnemonicParsing="false" onAction="#CustomerSatisfactionReport" prefHeight="30.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="CustomerSatisfactionReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ComplaintReport" layoutX="39.0" layoutY="282.0" mnemonicParsing="false" onAction="#ComplaintsReport" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="ComplaintsReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="166.0" layoutY="32.0" prefHeight="58.0" prefWidth="302.0" style="-fx-background-color: #2D3447;" text=" ViewReports" textFill="#a0a2ab">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="330.0" fitWidth="262.0" layoutX="331.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="120.30380249023438" AnchorPane.topAnchor="160.0">
+         <image>
+            <Image url="@../images/redRose.jpg" />
+         </image></ImageView>
+      <Button fx:id="ComplaintReport1" layoutX="39.0" layoutY="328.0" mnemonicParsing="false" onAction="#ComparisonCustomerSatisfactionReport" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="Comparison CustomerSatisfactionReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ComplaintReport2" layoutX="39.0" layoutY="376.0" mnemonicParsing="false" onAction="#ComparisonIncomeReport" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="Comparison IncomeReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ComplaintReport3" layoutX="39.0" layoutY="467.0" mnemonicParsing="false" onAction="#ComparisonOrdersReport" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="Comparison OrdersReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ComplaintReport4" layoutX="39.0" layoutY="421.0" mnemonicParsing="false" onAction="#ComparisonComplaintsReport" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: #151928;" text="Comparison ComplaintsReports" textFill="#a0a2ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="317.0" layoutY="32.0" prefHeight="58.0" prefWidth="164.0" style="-fx-background-color: #2D3447;" text="MenuWindow" textFill="#2196f3">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

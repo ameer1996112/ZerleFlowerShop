@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?> 
+<?import com.jfoenix.controls.JFXTextField?> 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddProductInterfaceController">
+    <children>
+      <Label layoutX="22.0" layoutY="21.0" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="productNameTextField" focusColor="#2196f3" layoutX="136.0" layoutY="116.0" prefHeight="35.0" prefWidth="157.0" promptText="Product Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="productLnvField" focusColor="#2196f3" layoutX="121.0" layoutY="171.0" prefHeight="35.0" prefWidth="157.0" promptText="Color">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="productMaxField" focusColor="#2196f3" layoutX="85.0" layoutY="284.0" prefHeight="25.0" prefWidth="72.0" promptText="Max" text="Min">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="productMinField" focusColor="#2196f3" layoutX="293.0" layoutY="284.0" prefHeight="25.0" prefWidth="72.0" promptText="Min" text="Max">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="27.0" layoutY="122.0" text="Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="177.0" text="Color">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="290.0" text="Min:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="290.0" text="Max:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="269.0" layoutY="511.0" onAction="#productSaveButtonAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: ababab;" text="Search" />
+      <JFXButton buttonType="RAISED" layoutX="199.0" layoutY="511.0" onAction="#closeButtonAction" style="-fx-background-color: ababab;" text="Cancel" />
+      <Label layoutX="17.0" layoutY="232.0" text="Price range" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="42.0" text="Search for product" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+    
+</AnchorPane>

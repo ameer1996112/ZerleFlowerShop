@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #424949;" styleClass="theme" stylesheets="@../bin/application/application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CatalogController">
+   <children>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: #ECF0F1;" text="Products Catalog" textAlignment="JUSTIFY" textFill="#270101" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Arial Narrow Bold" size="18.0" />
+         </font>
+      </Label>
+      <SplitPane fx:id="splitPane" dividerPositions="0.21237458193979933, 0.9949832775919732" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #424949;" styleClass="application.css" stylesheets="@../bin/application/application.css" VBox.vgrow="ALWAYS">
+        <items>
+            <ListView fx:id="listView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onContextMenuRequested="#buttonAction" onMouseClicked="#buttonAction" style="-fx-background-color: #424949; text-decoration-color: White;" styleClass="application.css" stylesheets="@../bin/application/application.css">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow color="#0449f7" />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></ListView>
+            <SplitPane fx:id="splitPane1" dividerPositions="0.2814070351758794, 0.2964824120603015" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="187.0" prefWidth="600.0">
+              <items>
+                  <TableView fx:id="tableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="181.0" prefWidth="443.0">
+                    <columns>
+                      <TableColumn fx:id="ProductName" prefWidth="123.99995168050145" resizable="false" text="Product" />
+                      <TableColumn fx:id="Desc" prefWidth="261.33338165283203" resizable="false" text="Description" />
+                        <TableColumn fx:id="Price" prefWidth="98.66659545898438" resizable="false" text="Price" />
+                    </columns>
+                  </TableView>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="131.0" prefWidth="493.0">
+                     <children>
+                        <Label fx:id="label1" layoutX="22.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="102.0" text="Product Name :">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textField" editable="false" layoutX="113.0" layoutY="4.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="26.0" prefWidth="342.0" promptText="Product Name ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></TextField>
+                        <Button fx:id="backbtn" layoutX="98.0" layoutY="232.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onContextMenuRequested="#BackBtn" onMouseClicked="#BackBtn" style="-fx-background-color: #424949;" text="Back" textFill="#fcfcfc" />
+                        <Button fx:id="editbtn" contentDisplay="CENTER" layoutX="149.0" layoutY="232.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onContextMenuRequested="#EditButton" onMouseClicked="#EditButton" style="-fx-background-color: #424949;" text="Edit" textFill="WHITE" />
+                        <Button fx:id="addbtn" layoutX="196.0" layoutY="232.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onContextMenuRequested="#AddProduct" onMouseClicked="#AddProduct" style="-fx-background-color: #424949;" text="Add" textFill="WHITE" />
+                        <TextArea fx:id="details" editable="false" layoutX="223.0" layoutY="40.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="225.0" promptText="Details" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor></TextArea>
+                        <Button fx:id="savebtn" layoutX="244.0" layoutY="232.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onContextMenuRequested="#SaveBtn" onMouseClicked="#SaveBtn" style="-fx-background-color: #424949;" text="Save" textFill="WHITE" />
+                        <ImageView fx:id="image" fitHeight="161.0" fitWidth="187.0" layoutX="11.0" layoutY="48.0" onContextMenuRequested="#ImageView" onMouseClicked="#ImageView">
+                           <image>
+                           
+                           </image>
+                        </ImageView>
+                        <Button fx:id="deletebtn" layoutX="296.0" layoutY="232.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onContextMenuRequested="#DeleteBtn" onMouseClicked="#DeleteBtn" style="-fx-background-color: #424949;" text="Delete" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </SplitPane>
+   </children>
+</VBox>

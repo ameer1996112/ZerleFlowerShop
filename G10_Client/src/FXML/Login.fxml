@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="321.0" prefWidth="250.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <StackPane prefHeight="317.0" prefWidth="241.0">
+        <children>
+          <StackPane>
+            <children>
+              <VBox prefHeight="297.0" prefWidth="242.0" spacing="10.0">
+                <children>
+                  <GridPane fx:id="grid" prefHeight="200.0" stylesheets="@DarkTheme2.css">
+                    <children>
+                      <Label alignment="CENTER" text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                      <Label alignment="CENTER" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                      <TextField fx:id="id" maxHeight="33.0" minHeight="24.0" prefHeight="33.0" prefWidth="151.0" promptText="User ID" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                              <PasswordField fx:id="password" minHeight="24.0" minWidth="140.0" prefHeight="39.0" prefWidth="140.0" promptText="*****" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="IP:" GridPane.rowIndex="2" />
+                              <Label text="Port:" GridPane.rowIndex="3" />
+                              <TextField fx:id="ip" minHeight="24.0" prefHeight="47.0" prefWidth="151.0" promptText="Server IP" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="port" minHeight="24.0" prefHeight="49.0" prefWidth="151.0" promptText="Server Port" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="branchComboBox" minHeight="24.0" prefHeight="35.0" prefWidth="150.0" promptText="Branch" stylesheets="@DarkTheme2.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label layoutX="10.0" layoutY="135.0" text="Branch" GridPane.rowIndex="4" />
+                    </children>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="109.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="189.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                        <Pane prefHeight="60.0" prefWidth="211.0">
+                           <children>
+                              <Label fx:id="guiMeg" alignment="CENTER" contentDisplay="CENTER" opacity="0.5" prefHeight="38.0" prefWidth="211.0" textAlignment="CENTER" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <SepiaTone level="0.35" />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </Pane>
+                  <StackPane layoutY="200.0" prefHeight="38.0" prefWidth="235.0">
+                           <children>
+                      <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#OnLogin" text="Login" textAlignment="RIGHT" />
+                           </children>
+                  </StackPane>
+                </children>
+              </VBox>
+            </children>
+          </StackPane>
+        </children>
+        <padding>
+          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </padding>
+      </StackPane>
+   </children>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@DarkTheme.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CancelOrderController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #000000;" styleClass="background" stylesheets="@style.css">
+               <children>
+                  <AnchorPane fx:id="anchorpane" layoutY="193.0" prefHeight="407.0" prefWidth="1000.0" stylesheets="@style.css">
+                     <children>
+                        <ComboBox fx:id="OrderCombo" layoutX="425.0" layoutY="127.0" onAction="#showDeatils" prefWidth="150.0" stylesheets="@application.css" />
+                        <GridPane layoutX="400.0" layoutY="240.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order date:" />
+                              <Text layoutX="10.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order cost:" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order products" GridPane.rowIndex="2" />
+                              <TextField fx:id="dateField" prefHeight="25.0" prefWidth="121.0" styleClass="text-field" stylesheets="@application.css" GridPane.columnIndex="1" />
+                              <TextField fx:id="orderCost" styleClass="text-field" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="productCombo" disable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Button layoutX="474.0" layoutY="361.0" mnemonicParsing="false" onAction="#CancelOrder" text="Canel this order" />
+                        <Text layoutX="225.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your order number(The order id):">
+                           <font>
+                              <Font name="Helvetica Bold" size="28.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="-2.0" layoutY="1.0" prefWidth="1000.0" stylesheets="@DarkTheme.css">
+                     <children>
+                        <ToolBar prefHeight="66.0" prefWidth="1000.0" style="-fx-background-color: #000000;" stylesheets="@custom.css">
+                           <items>
+                              <Button fx:id="MainMenuBtn" layoutX="177.0" layoutY="12.0" mnemonicParsing="false" onAction="#GoBackToMainMenu" prefHeight="34.0" prefWidth="201.0" text="Main menu">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#fcf7f7" glyphName="MENU" size="20" />
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#Logout" prefHeight="34.0" prefWidth="201.0" text="Logout">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#fcf7f7" glyphName="ACCOUNT" size="20" />
+                                 </graphic>
+                              </Button>
+                           </items>
+                           <styleClass>
+                              <String fx:value="mylistview" />
+                              <String fx:value="menu" />
+                              <String fx:value="table-view" />
+                           </styleClass>
+                        </ToolBar>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="BackgroundImage" fitHeight="126.0" fitWidth="1000.0" layoutX="-3.0" layoutY="68.0" pickOnBounds="true" />
+                  <ImageView fx:id="StoreImage" fitHeight="84.0" fitWidth="263.0" layoutX="385.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
